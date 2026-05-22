@@ -1,0 +1,9 @@
+Retail Demand Forecasting and Inventory Replenishment Optimization
+
+This project analyzes retail sales and inventory data to identify demand patterns, detect stockouts, forecast product demand, and recommend optimal replenishment quantities.
+
+Key Outcomes:
+- Identification of high-risk SKUs causing stockouts
+- Forecasting of demand trends using historical sales
+- Replenishment model to determine reorder points and recommended order quantities
+- Business insights to improve inventory availability and reduce lost sales
