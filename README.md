@@ -1,85 +1,112 @@
-# Sales Intelligence Workflow Engine
+# Retail Demand Forecasting & Replenishment Engine
 
-A modular Python-based commercial intelligence application designed to transform fragmented transactional sales data into structured decision support for business users.
+A Python-based inventory decision intelligence system designed to forecast retail demand, detect stockout and overstock risk, and generate data-backed replenishment recommendations for operational planning.
 
 ## Product Thesis
 
-Customer-facing and commercial teams often operate with incomplete, inconsistent, or low-quality transactional data that slows decision-making and reduces commercial visibility.
+Retail inventory decisions often fail because organizations operate with fragmented demand visibility, delayed replenishment responses, and limited operational forecasting confidence.
 
-This project explores how internal workflow tooling can improve commercial intelligence through automated data normalization, validation, analytics generation, external enrichment, and resilient reporting workflows.
+This project explores how structured analytics and workflow automation can improve inventory decision-making through demand forecasting, inventory risk intelligence, replenishment policy automation, and impact simulation.
 
-Rather than functioning as a one-off analytics script, the system is intentionally designed as a workflow-oriented internal product with modular architecture, failure resilience, and extensibility.
+Rather than functioning as a one-off analytics exercise, the system is intentionally designed as an operational decision-support product simulating how internal retail planning teams could use data-driven workflow tooling to improve service levels while controlling inventory costs.
 
 ---
 
 ## Core Product Capabilities
 
-### Commercial Intelligence Generation
-Transforms raw sales transaction data into actionable business insights including:
+### Demand Forecasting Intelligence
 
-- total revenue analysis
-- regional performance breakdowns
-- product-level revenue contribution
-- customer revenue segmentation
-- transaction trend analysis
-- average transaction value analysis
-- peak sales day identification
-- low-performing product detection
+Forecasts retail demand at SKU-store level using structured forecasting workflows.
 
----
+Capabilities include:
 
-### Data Quality & Validation Layer
-Implements resilient preprocessing and validation workflows:
+- demand trend analysis
+- seasonality detection
+- promo / holiday demand impact analysis
+- baseline forecasting models
+- comparative forecast performance evaluation
+- forecast accuracy measurement (MAPE / WAPE)
 
-- malformed record detection
-- numeric normalization and cleaning
-- quantity / pricing validation
-- structured processing summaries
-- filter-aware data handling
+Designed to improve planning confidence for near-term inventory decisions.
 
 ---
 
-### External Enrichment Workflow
-Simulates production-style commercial data enrichment through API integration:
+### Inventory Risk Intelligence
 
-- public product metadata retrieval
-- retry logic and timeout resilience
-- efficient product ID mapping
-- graceful degradation on API failure
+Identifies operational inventory risk zones including:
 
-Enriched attributes include:
+- projected stockout risk
+- overstock risk
+- inventory health classification
+- days of inventory coverage analysis
+- stockout exposure visibility
+- lost sales proxy estimation
 
-- product title
-- category
-- brand
-- rating metadata
+Supports proactive intervention rather than reactive inventory firefighting.
 
 ---
 
-### Reporting & Decision Support
-Generates structured business-facing outputs including:
+### Replenishment Decision Engine
 
-- executive summaries
-- commercial performance reporting
-- product intelligence
-- customer insights
-- operational trend reporting
-- enrichment transparency
+Implements replenishment planning logic using inventory policy principles.
+
+Includes:
+
+- safety stock calculation
+- reorder point computation
+- lead-time-aware replenishment logic
+- recommended reorder quantity generation
+- service-level-aware inventory planning
+- constraint-aware replenishment decisioning
+
+Simulates operational planning workflows used by retail inventory teams.
+
+---
+
+### ETL & Data Engineering Layer
+
+Built reproducible Python ETL workflows for structured operational data preparation.
+
+Capabilities:
+
+- multi-source data ingestion
+- missing data handling
+- duplicate resolution
+- outlier detection
+- schema normalization
+- curated dataset generation
+
+Generated outputs include:
+
+- fact_sales_store_sku_daily
+- fact_inventory_store_sku_daily
+- replenishment_inputs_store_sku
+
+---
+
+### Executive Decision Support
+
+Produces business-facing outputs for inventory planning and leadership visibility including:
+
+- inventory risk prioritization
+- replenishment planning recommendations
+- operational KPI tracking
+- impact estimation scenarios
+- decision-ready business summaries
 
 ---
 
 ## Product Architecture
 
-Designed using modular application architecture principles.
+Designed as a modular analytics decision-support system.
 
 ```text
-sales-analytics-system/
-├── main.py
-├── requirements.txt
-├── utils/
-│   ├── file_handler.py
-│   ├── data_processor.py
-│   ├── api_handler.py
-│   └── report_generator.py
+retail-demand-forecasting-replenishment-engine/
+├── etl/
+│   └── etl_pipeline.py
+├── analysis/
+│   └── analysis.ipynb
+├── dashboard/
+├── final_story/
 ├── data/
-└── output/
+└── README.md
