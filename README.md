@@ -1,38 +1,85 @@
-# Retail Demand Forecasting and Inventory Replenishment Optimization
+# Sales Intelligence Workflow Engine
 
-## Project Overview
-This project analyzes retail sales and inventory data to detect stockouts, forecast product demand, and recommend optimal inventory replenishment strategies.
+A modular Python-based commercial intelligence application designed to transform fragmented transactional sales data into structured decision support for business users.
 
-## Project Structure
+## Product Thesis
 
-data_raw/
-Raw source datasets
+Customer-facing and commercial teams often operate with incomplete, inconsistent, or low-quality transactional data that slows decision-making and reduces commercial visibility.
 
-etl/
-ETL pipeline used to clean and transform raw data
+This project explores how internal workflow tooling can improve commercial intelligence through automated data normalization, validation, analytics generation, external enrichment, and resilient reporting workflows.
 
-data/
-Curated datasets generated from the ETL pipeline
+Rather than functioning as a one-off analytics script, the system is intentionally designed as a workflow-oriented internal product with modular architecture, failure resilience, and extensibility.
 
-analysis/
-Jupyter notebook containing exploratory analysis, forecasting, and inventory modeling
+---
 
-dashboard/
-Reserved for future dashboard development
+## Core Product Capabilities
 
-final_story/
-Project summary and business insights
+### Commercial Intelligence Generation
+Transforms raw sales transaction data into actionable business insights including:
 
-## Key Components
+- total revenue analysis
+- regional performance breakdowns
+- product-level revenue contribution
+- customer revenue segmentation
+- transaction trend analysis
+- average transaction value analysis
+- peak sales day identification
+- low-performing product detection
 
-Exploratory Data Analysis  
-Understanding sales patterns and stockout behavior.
+---
 
-Demand Forecasting  
-Forecasting demand trends using historical sales data.
+### Data Quality & Validation Layer
+Implements resilient preprocessing and validation workflows:
 
-Inventory Replenishment Model  
-Calculating safety stock, reorder points, and recommended order quantities.
+- malformed record detection
+- numeric normalization and cleaning
+- quantity / pricing validation
+- structured processing summaries
+- filter-aware data handling
 
-Business Insights  
-Identifying high-risk SKUs and operational improvements for retail inventory management.
+---
+
+### External Enrichment Workflow
+Simulates production-style commercial data enrichment through API integration:
+
+- public product metadata retrieval
+- retry logic and timeout resilience
+- efficient product ID mapping
+- graceful degradation on API failure
+
+Enriched attributes include:
+
+- product title
+- category
+- brand
+- rating metadata
+
+---
+
+### Reporting & Decision Support
+Generates structured business-facing outputs including:
+
+- executive summaries
+- commercial performance reporting
+- product intelligence
+- customer insights
+- operational trend reporting
+- enrichment transparency
+
+---
+
+## Product Architecture
+
+Designed using modular application architecture principles.
+
+```text
+sales-analytics-system/
+├── main.py
+├── requirements.txt
+├── utils/
+│   ├── file_handler.py
+│   ├── data_processor.py
+│   ├── api_handler.py
+│   └── report_generator.py
+├── data/
+└── output/
